@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-m4_6kk@n#)shf$b%+f1ii3w%tzrz(y#ra5wotj@$^xt=jy_!a@
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'adarshkumarsinha.herokuapp.com',
+    'realadarsh.herokuapp.com',
     'localhost'
 ]
 
@@ -127,8 +127,6 @@ MEDIA_URL = '/images/'
 
 STATIC_ROOT = 'static/'
 STATIC_URL = '/static/'
-
-
 
 # STATIC_ROOT = BASE_DIR/'staticfiles'
 
