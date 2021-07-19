@@ -1,0 +1,156 @@
+{% load static %}
+
+
+<!-- <h1>Hello World!</h1>
+
+<img src="{% static 'images/adarsh.jpg' %}" alt="Cant load">
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head> <title>Adarsh Kumar Sinha</title>
+    
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href = "{% static '/css/main.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <div class = "social-box">
+        <ul class="social-links">
+            <li><a href = "https://www.linkedin.com/in/adarsh-kumar-sinha-2a32b515a/"><img class="social" src="{% static 'images/linkedin.png' %}" alt="linkedin"></a>
+            </li>
+            <li><a href = "mailto:aksinha.dhn@gmail.com"> <img class= "social" src="{% static 'images/gmail.png' %}" alt = "send mail"> </a>
+            </li>
+            <li><a href = "https://www.facebook.com/adarsh.sinha.7547/"> <img class="social" src="{% static 'images/facebook.png' %}" alt = "fb"></a>
+            </li>
+            <li>
+                <a href = "https://github.com/sirAdarsh"><img class = "social" src="{% static 'images/github.png' %}"></a>
+            </li>
+        </ul>
+    </div>
+
+
+    <!--Footer-->
+    <div class = "footer">
+        <p> Made with <img class="social" src ="{% static 'images/love.png' %}"> by AKS</p>
+
+    </div>
+
+
+    <br>
+    <div class = "container" style="margin-bottom: 10%;">
+        <div class = "row">
+            <div class = "col-lg-3">
+                <div class = "card card-body" id="profile-wrapper">
+                    <img id = "profile-pic" src="{% static 'images/adarsh.jpg' %}" >
+                    <hr>
+                    <h4></H4>Hi, I am Adarsh</h4>
+                </div>
+            </div>
+            <div class = "col-lg-7">
+                <div class = "card card-body" id = "heading">
+                    <br>
+                    <p style= " font-size: 40px; text-align: center;">Hi, Welcome to my little world!</p>
+                    <hr>
+                    <p>
+                       I am glad you made to my website! I am <strong>Adarsh Kumar Sinha</strong>, currently in my final year of engineering in Electronics and Communication which I desperately wait to get over so I can step into some real world problems and work on their solutions. <br> 
+                    And yeah! I enjoy listening songs and wathing movies a lot!
+                    
+                </div>
+            </div>
+
+            <div class = "col-lg-2">
+                <div class = "card card-body" id = "heading" style="background-color: gainsboro; border: none;">
+
+                    <ul class ="more" id="moreabout">
+                        <li><img src="{% static 'images/education.png' %}" title="Education"></li>
+                        <li><img src="{% static 'images/achievements.png' %}" title="Achievements"></li>
+                        <li><img src="{% static 'images/blogs.png' %}" title="Blogs"></li>
+                    </ul>
+                    
+                    
+                </div>
+            </div>
+
+        </div>
+        <hr>
+        
+        <br>
+
+        <div class = "row">
+            <div class = "col-lg-6">
+                <div class = "card card-body">
+                    <h3 style="text-align: center;">Languages</h3>
+                    <hr>
+                    <ul class = "languages">
+                        <li><img src = "{% static 'images/C.png' %}">  </li>
+                        <li><img src = "{% static 'images/cpp.png' %}">  </li>
+                        <li><img src = "{% static 'images/python.png' %}">  </li>
+                        <li><img src = "{% static 'images/java.png' %}">  </li>
+                    </ul>
+                </div>
+            </div>
+            <div class = "col-lg-6">
+                <div class = "card card-body">
+                    <h3 style="text-align: center;">Databases</h3>
+                    <hr>
+                    <ul class = "languages">
+                        <li><img src = "{% static 'images/mysql.png' %}">  </li>
+                        <li><img src = "{% static 'images/mongo.png' %}">  </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class = "row">
+            <div class = "col-lg-6">
+                <div class = "card card-body">
+                    <h3 style="text-align: center;">Web Development</h3>
+                    <hr>
+                    <ul class = "languages">
+                        <li><img src = "{% static 'images/html-5.png' %}">  </li>
+                        <li><img src = "{% static 'images/css.png' %}">  </li>
+                        <li><img src = "{% static 'images/django.png' %}">  </li>
+                    </ul>
+                </div>
+            </div>
+            <div class = "col-lg-6">
+                <div class = "card card-body">
+                    <h3 style="text-align: center;">Competitve Programming profiles</h3> 
+                    <hr>
+                    <ul class = "languages" id="cp">
+                        <li><a href="https://codeforces.com/profile/real_adarsh" title="Codeforces"><img src = "{% static 'images/codeforces.png' %}"> </a>  </li>
+                        <li><a href="https://codechef.com/users/real_adarsh" title="Codechef"><img src = "{% static 'images/codechef.png' %}"> </a>  </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class = "col">
+            <div class = "row-md">
+                <div class = "card card-body" style= " margin-left: 30%; margin-right: 30%; border-radius: 25px; background-color:ivory; text-align: center;">
+                    <h4 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Have a query?</h4>
+                    <hr>
+                    
+                    <div class="form-group">
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            
+                            {{form.as_table}}
+                            <br>
+
+                            <input type="submit">
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>
