@@ -1,0 +1,119 @@
+{% load static %}
+{% load markdown_deux_tags %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head> <title>AKS- Blogs</title>
+    
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href = "{% static '/css/main.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <div class = "social-box">
+        <ul class="social-links">
+            <li><a href = "https://www.linkedin.com/in/adarsh-kumar-sinha-2a32b515a/"><img class="social" src="{% static 'images/linkedin.png' %}" alt="linkedin"></a>
+            </li>
+            <li><a href = "mailto:aksinha.dhn@gmail.com"> <img class= "social" src="{% static 'images/gmail.png' %}" alt = "send mail"> </a>
+            </li>
+            <li><a href = "https://www.facebook.com/adarsh.sinha.7547/"> <img class="social" src="{% static 'images/facebook.png' %}" alt = "fb"></a>
+            </li>
+            <li>
+                <a href = "https://github.com/sirAdarsh"><img class = "social" src="{% static 'images/github.png' %}"></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class = "container" style = "margin-bottom: 10%; margin-top: 0%; ">
+        
+        <div class = "row" style="padding-bottom: 0%; margin-top: 0%; ">
+            
+            <div class = "col-md-9" style="position: fixed; z-index: 1;">
+                <div class = "card card-body" id="search-box" style="padding-bottom: 0%; margin-top: 0%; border-radius: 40px; font-family: Georgia, 'Times New Roman', Times, serif; background-color:rgb(215, 245, 245);">
+                    
+                    <h3 style="text-align: center; color: rgb(96, 96, 233)">{{data.blog_title}}</h3><hr>
+                    <p style="font-weight: 300; font-family: Georgia, 'Times New Roman', Times, serif; padding: 0%;"> {{data.date_pub}} </p>
+
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <div class = "row" style="margin-top: 20%; padding-bottom: 0%;">
+            <div class = "col-md-10 offset-md-1">
+                <div class = "card card-body" id="search-box" style="padding-bottom: 0%;">
+                    
+                    <p>{{data.blog|markdown}}</p>
+                    <br>
+                    <br>
+                    <a href = "/blogapp" style="margin-left: 90%;">Go Back</a>
+
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <hr>
+        <br>
+        <div style="background-color: rgb(173, 166, 166); border-radius: 25px; padding: 2%;">
+            <h2><strong>Comments :</strong></h2>
+            {%for comment in comments%}
+            <div class = "row" style="padding-bottom: 0%; padding-top : 1%">
+                <div class = "col-md-10 offset-md-1">
+                    <div class = "card card-body" id="search-box" style="margin-bottom: 0% ; border-color: black;" >
+                    
+                        <strong>{{comment.your_name}} :</strong>  <p style="padding-left: 5%; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: larger;">{{comment.comment_text}}</p>
+                        <br>
+                        <p style="font-weight: 300; font-family: Georgia, 'Times New Roman', Times, serif; padding: 0%;"> {{comment.comment_date}} </p>
+                
+                    </div>
+                </div>
+            </div>
+            {%endfor %}
+        </div>
+
+    
+    </div>
+
+    
+    
+    
+    <hr/>
+    
+
+
+
+    <div class = "container" style = "margin-bottom: 10%; margin-top: 2%; ">
+        
+        <div class = "row" style="padding-bottom: 1%;">
+            
+            <div class = "col-lg-6" style="border-width: 2px; border-color: black ;">
+                <div class = "card card-body" id="search-box" style="padding-bottom: 1%; border-width: 2px; border-color: black ;">
+                    
+                    <h3 style="text-align: left;">Add a comment</h3><hr>
+                    <form method="post">
+                        {%csrf_token %} 
+                        {{form.as_p}}
+                        <input type ="submit" value="Comment">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        
+
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+
+</body>
+</html>
