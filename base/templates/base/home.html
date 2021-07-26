@@ -57,7 +57,7 @@
                 <div class = "card card-body" id = "heading" style="background-color: gainsboro; border: none;">
                     <p style="margin: 0%; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: 800; color: blue;">More about me..</p>
                     <ul class ="more" id="moreabout">
-                        <li><img src="{% static 'images/education.png' %}" title="Education"></li>
+                        <li><a href="{% url 'education' %}"><img src="{% static 'images/education.png' %}" title="Education"></a></li>
                         <li><img src="{% static 'images/achievements.png' %}" title="Achievements"></li>
                         <li> <a href="/blogapp/"> <img src="{% static 'images/blogs.png' %}" title="Blogs"> </a> </li>
                     </ul>

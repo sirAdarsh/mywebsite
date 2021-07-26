@@ -24,3 +24,6 @@ def home(request):
 
     context = {'form':form}
     return render(request, html_page, context)
+
+def ed(request):
+    return render(request, 'base/education.html')
